@@ -16,12 +16,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+int a = Integer.parseInt(GlobalVariable.GV)
 
-
-int a = Integer.parseInt(GlobalVariable.GV);
-
-
-	
 WebUI.navigateToUrl('https://www.google.com/?gws_rd=ssl')
 
 WebUI.setText(findTestObject('Object Repository/input__q'), findTestData('testdata').getValue(1, GlobalVariable.X))
@@ -30,7 +26,5 @@ WebUI.sendKeys(findTestObject('Object Repository/input__q'), Keys.chord(Keys.ENT
 
 WebUI.back()
 
-
-
-
+WebUI.click(findTestObject('input__q'))
 
